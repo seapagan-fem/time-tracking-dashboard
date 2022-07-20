@@ -100,6 +100,7 @@ ul {
   background-repeat: no-repeat;
   background-position: right 17px top;
   background-size: 72px 72px;
+  overflow: hidden;
 }
 
 .card.work {
@@ -136,7 +137,7 @@ ul {
   margin-top: 38px;
   background-color: var(--dark-blue);
   color: white;
-  border-radius: 15px;
+  border-radius: 15px 15px 0 0;
   padding: 28px 24px;
   overflow: hidden;
 }

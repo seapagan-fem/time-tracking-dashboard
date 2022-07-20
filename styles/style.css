@@ -3,7 +3,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-weight: normal;
+  font-weight: 400;
 }
 
 :root {
@@ -32,11 +32,112 @@
   --pale-blue: hsl(236, 100%, 87%);
 }
 
+body {
+  background-color: var(--very-dark-blue);
+  padding: 4.5em 1.3em;
+}
+
+main {
+  display: grid;
+  row-gap: 24px;
+}
+
+/* --------------------------- style profile card --------------------------- */
+.profile {
+  display: flex;
+  flex-direction: column;
+  color: white;
+  background-color: var(--dark-blue);
+  border-radius: 15px;
+  overflow: hidden;
+}
+.profile-wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  column-gap: 20px;
+  padding: 34px;
+  border-radius: 15px;
+  background-color: var(--blue);
+}
+
+.profile-image {
+  width: 64px;
+  height: 64px;
+  border: 3px solid white;
+  border-radius: 50%;
+}
+.profile-info p {
+  color: var(--pale-blue);
+  font-size: 15px;
+}
+
+.profile-info h1 {
+  font-size: 1.3rem;
+}
+
+ul {
+  display: flex;
+  justify-content: space-around;
+  padding: 24px 0;
+  list-style: none;
+  color: var(--desaturated-blue);
+}
+
+.period.active {
+  color: white;
+}
+
+/* --------------------------- style the base card -------------------------- */
+.card {
+  background-color: var(--dark-blue);
+  color: white;
+  border-radius: 15px;
+  padding: 28px 24px;
+}
+
+.card .title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card .title h2 {
+  font-size: 1rem;
+  margin-bottom: 6px;
+  font-weight: 500;
+}
+
+.card .title img {
+  color: var(--pale-blue);
+}
+
+.card .metrics {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card .metric-time {
+  font-size: 1.8rem;
+  font-weight: 300;
+}
+
+.card .previous-metric {
+  font-size: 0.84rem;
+  color: var(--pale-blue);
+}
+
+footer {
+  margin-top: 16px;
+}
+
 /* ------------------------------- attribution ------------------------------ */
 .attribution {
   font-size: 11px;
   text-align: center;
+  color: white;
 }
 .attribution a {
-  color: hsl(228, 45%, 44%);
+  color: var(--pale-blue);
 }

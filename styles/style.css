@@ -106,8 +106,6 @@ main {
   /* background-color: #fff; */
   border-radius: 15px;
   background-repeat: no-repeat;
-  background-position: right 17px top;
-  background-size: 72px 72px;
   overflow: hidden;
 }
 
@@ -156,30 +154,36 @@ main {
 .card.work {
   background-image: url(../images/icon-work.svg);
   background-color: var(--orange);
+  background-position: right 18px top -11px;
 }
 
 .card.play {
   background-image: url(../images/icon-play.svg);
   background-color: var(--soft-blue);
+  background-position: right 18px top -5px;
 }
 
 .card.study {
   background-image: url(../images/icon-study.svg);
   background-color: var(--light-red);
+  background-position: right 18px top -8px;
 }
 
 .card.exercise {
   background-image: url(../images/icon-exercise.svg);
+  background-position: right 18px top -1px;
   background-color: var(--lime-green);
 }
 
 .card.social {
   background-image: url(../images/icon-social.svg);
+  background-position: right 18px top -15px;
   background-color: var(--violet);
 }
 
 .card.self-care {
   background-image: url(../images/icon-self-care.svg);
+  background-position: right 18px top -12px;
   background-color: var(--soft-orange);
 }
 
@@ -219,6 +223,10 @@ main {
     max-width: 255px;
   }
 
+  .inner-card {
+    margin-top: 45px;
+  }
+
   .inner-card .metrics {
     margin-top: 24px;
     flex-direction: column;
@@ -232,6 +240,8 @@ main {
     margin-bottom: 8px;
   }
 
+
+  /* ------------------------- sort the attribution ------------------------- */
   .attribution {
     position: absolute;
     width: 100%;

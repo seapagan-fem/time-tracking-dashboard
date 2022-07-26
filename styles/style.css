@@ -132,8 +132,8 @@ main {
   font-weight: 500;
 }
 
-.inner-card .title img {
-  color: var(--pale-blue);
+.ellipsis {
+  padding: 0.5em 0;
 }
 
 .inner-card .metrics {
@@ -279,5 +279,21 @@ main {
     position: absolute;
     width: 100%;
     bottom: 8px;
+  }
+
+  /* --------------------------- set hover states --------------------------- */
+  .period:hover {
+    color: white;
+  }
+
+  .inner-card:hover {
+    background-color: hsl(236, 41%, 34%);
+    cursor: pointer;
+  }
+
+  .ellipsis:hover {
+    cursor: pointer;
+    filter: brightness(0) saturate(100%) invert(98%) sepia(7%) saturate(0%)
+      hue-rotate(71deg) brightness(106%) contrast(100%);
   }
 }

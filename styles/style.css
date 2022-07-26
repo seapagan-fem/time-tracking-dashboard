@@ -76,19 +76,24 @@ main {
   font-size: 1.3rem;
 }
 
-ul {
+.period-choice {
   display: flex;
   justify-content: space-around;
+
   padding: 24px 0;
-  list-style: none;
   color: var(--desaturated-blue);
+}
+
+.period-choice input[type="radio"] {
+  appearance: none;
+  margin: 0;
 }
 
 .period {
   cursor: pointer;
 }
 
-.period.active {
+.period-choice input[type="radio"]:checked + .period {
   color: white;
 }
 

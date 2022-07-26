@@ -20,6 +20,7 @@
     <link rel="stylesheet" href="styles/style.css" />
     <title>Frontend Mentor | Time tracking dashboard</title>
   </head>
+
   <body>
     <main>
       <section class="profile">
@@ -34,11 +35,22 @@
             <h1>Jeremy Robson</h1>
           </div>
         </div>
-        <ul>
-          <li class="period active">Daily</li>
-          <li class="period">Weekly</li>
-          <li class="period">Monthly</li>
-        </ul>
+        <div class="period-choice">
+          <span>
+            <input checked type="radio" name="period" id="day" value="daily" />
+            <label for="day" class="period">Daily </label>
+          </span>
+
+          <span>
+            <input type="radio" name="period" id="week" value="weekly" />
+            <label for="week" class="period"> Weekly</label>
+          </span>
+
+          <span>
+            <input type="radio" name="period" id="month" value="monthly" />
+            <label for="month" class="period"> Monthly</label>
+          </span>
+        </div>
       </section>
       <section class="card work">
         <div class="inner-card">
@@ -46,7 +58,7 @@
             <h2>Work</h2>
             <img src="images/icon-ellipsis.svg" alt="more info" />
           </div>
-          <div class="metrics">
+          <div name="work" class="metrics">
             <p class="metric-time">5hrs</p>
             <p class="previous-metric">7hrs</p>
           </div>
@@ -58,7 +70,7 @@
             <h2>Play</h2>
             <img src="images/icon-ellipsis.svg" alt="more info" />
           </div>
-          <div class="metrics">
+          <div name="play" class="metrics">
             <p class="metric-time">1hr</p>
             <p class="previous-metric">2hrs</p>
           </div>
@@ -70,7 +82,7 @@
             <h2>Study</h2>
             <img src="images/icon-ellipsis.svg" alt="more info" />
           </div>
-          <div class="metrics">
+          <div name="study" class="metrics">
             <p class="metric-time">0hrs</p>
             <p class="previous-metric">1hr</p>
           </div>
@@ -82,7 +94,7 @@
             <h2>Exercise</h2>
             <img src="images/icon-ellipsis.svg" alt="more info" />
           </div>
-          <div class="metrics">
+          <div name="exercise" class="metrics">
             <p class="metric-time">1hr</p>
             <p class="previous-metric">1hr</p>
           </div>
@@ -94,7 +106,7 @@
             <h2>Social</h2>
             <img src="images/icon-ellipsis.svg" alt="more info" />
           </div>
-          <div class="metrics">
+          <div name="social" class="metrics">
             <p class="metric-time">1hr</p>
             <p class="previous-metric">3hrs</p>
           </div>
@@ -106,7 +118,7 @@
             <h2>Self Care</h2>
             <img src="images/icon-ellipsis.svg" alt="more info" />
           </div>
-          <div class="metrics">
+          <div name="self care" class="metrics">
             <p class="metric-time">0hrs</p>
             <p class="previous-metric">1hr</p>
           </div>

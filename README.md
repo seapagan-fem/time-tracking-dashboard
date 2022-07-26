@@ -33,7 +33,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [on Frontend Mentor](https://your-solution-url.com)
+- Solution URL: [on Frontend Mentor](https://www.frontendmentor.io/solutions/responsive-time-tracking-dashboard-data-from-json-OomXHZRPhf)
 - Live Site URL: [On GitHub pages](https://seapagan-fem.github.io/time-tracking-dashboard/)
 
 ## My process

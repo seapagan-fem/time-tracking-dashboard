@@ -76,24 +76,29 @@ main {
   font-size: 1.3rem;
 }
 
-ul {
+.period-choice {
   display: flex;
   justify-content: space-around;
+
   padding: 24px 0;
-  list-style: none;
   color: var(--desaturated-blue);
+}
+
+.period-choice input[type="radio"] {
+  appearance: none;
+  margin: 0;
 }
 
 .period {
   cursor: pointer;
+  user-select: none;
 }
 
-.period.active {
+.period-choice input[type="radio"]:checked + .period {
   color: white;
 }
 
 /* --------------------------- style the base card -------------------------- */
-
 .card {
   /* background-color: #fff; */
   border-radius: 15px;
@@ -101,36 +106,6 @@ ul {
   background-position: right 17px top;
   background-size: 72px 72px;
   overflow: hidden;
-}
-
-.card.work {
-  background-image: url(../images/icon-work.svg);
-  background-color: var(--orange);
-}
-
-.card.play {
-  background-image: url(../images/icon-play.svg);
-  background-color: var(--soft-blue);
-}
-
-.card.study {
-  background-image: url(../images/icon-study.svg);
-  background-color: var(--light-red);
-}
-
-.card.exercise {
-  background-image: url(../images/icon-exercise.svg);
-  background-color: var(--lime-green);
-}
-
-.card.social {
-  background-image: url(../images/icon-social.svg);
-  background-color: var(--violet);
-}
-
-.card.self-care {
-  background-image: url(../images/icon-self-care.svg);
-  background-color: var(--soft-orange);
 }
 
 .inner-card {
@@ -172,6 +147,37 @@ ul {
 .inner-card .previous-metric {
   font-size: 0.84rem;
   color: var(--pale-blue);
+}
+
+/* now the individual cards  */
+.card.work {
+  background-image: url(../images/icon-work.svg);
+  background-color: var(--orange);
+}
+
+.card.play {
+  background-image: url(../images/icon-play.svg);
+  background-color: var(--soft-blue);
+}
+
+.card.study {
+  background-image: url(../images/icon-study.svg);
+  background-color: var(--light-red);
+}
+
+.card.exercise {
+  background-image: url(../images/icon-exercise.svg);
+  background-color: var(--lime-green);
+}
+
+.card.social {
+  background-image: url(../images/icon-social.svg);
+  background-color: var(--violet);
+}
+
+.card.self-care {
+  background-image: url(../images/icon-self-care.svg);
+  background-color: var(--soft-orange);
 }
 
 footer {

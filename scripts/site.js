@@ -1,7 +1,7 @@
 /* -------------------------------------------------------------------------- */
 /*                         read in data from JSON file                        */
 /* -------------------------------------------------------------------------- */
-const data = await fetch("../data.json").then((res) => res.json());
+const data = await fetch("data.json").then((res) => res.json());
 
 /* -------------------------------------------------------------------------- */
 /*              populate the cards with data depending on choice              */

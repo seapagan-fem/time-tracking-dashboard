@@ -13,7 +13,9 @@ This is a solution to the [Time tracking dashboard challenge on Frontend Mentor]
   - [My process](#my-process)
     - [Built with](#built-with)
     - [What I learned](#what-i-learned)
+    - [Useful resources](#useful-resources)
   - [Author](#author)
+  - [Acknowledgments](#acknowledgments)
 
 ## Overview
 
@@ -60,8 +62,26 @@ Styling was quite fun too, and getting the cards correct was more difficult
 than it seemed at first glance. I styled mobile-first, and after that the
 desktop version was very easy.
 
+### Useful resources
+
+- [Stack Overflow](https://stackoverflow.com/a/53336754/6641755) - Colouring the
+  ellipsis SVG on hover was a pain, SVG loaded by IMG tag cannot have its color
+  set by normal means (inline SVG can, but I didn't want to add the SVG to each
+  card manually). Solution 3 on this answer helped me to do it using CSS
+  filters. Note that using a lot of filters like that could cause performance
+  issues on large projects.
+
 ## Author
 
 - Website - [Grant Ramsay](https://www.gnramsay.com)
 - Frontend Mentor - [@seapagan](https://www.frontendmentor.io/profile/seapagan)
 - Twitter - [@gnramsay_dev](https://www.twitter.com/gnramsay_dev)
+
+## Acknowledgments
+
+Shout out to
+[@ApplePieGiraffe](https://www.frontendmentor.io/profile/ApplePieGiraffe) for
+pointing out in comment to one of my previous challenge solutions that Radio
+buttons can simpify things when you only want one of many options active.
+Prevoiusly I'd have used a styled list and then needed extra JS to handle the
+states.

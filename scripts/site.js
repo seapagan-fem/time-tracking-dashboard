@@ -6,6 +6,9 @@ const data = await fetch("data.json").then((res) => res.json());
 /* -------------------------------------------------------------------------- */
 /*              populate the cards with data depending on choice              */
 /* -------------------------------------------------------------------------- */
+const getChoice = () => {
+  return document.querySelector('input[name="period"]:checked').value;
+};
 
 const titleCase = (word) => {
   // converts a word to 'Title' case. Why does JS not have this as standard???
@@ -18,7 +21,7 @@ const postfix = (value) => {
   return `${value}hr${value === 1 ? "" : "s"}`;
 };
 
-const prefix = (value) => {
+const periodPrefix = (value) => {
   // add the correct prefix for the previous data
   const currentChoice = getChoice();
   switch (currentChoice) {
@@ -34,7 +37,7 @@ const prefix = (value) => {
 const populateSingleCard = (cardType, data) => {
   Array.from(document.getElementsByName(cardType)).forEach((el) => {
     el.querySelector(".metric-time").innerText = postfix(data.current);
-    el.querySelector(".metric-previous").innerText = prefix(
+    el.querySelector(".metric-previous").innerText = periodPrefix(
       postfix(data.previous)
     );
   });
@@ -49,18 +52,11 @@ const populateCards = (choice, metricData) => {
 /* -------------------------------------------------------------------------- */
 /*                         handle the selection change                        */
 /* -------------------------------------------------------------------------- */
-const getChoice = () => {
-  return document.querySelector('input[name="period"]:checked').value;
-};
-
-const handleRadioClick = (e) => populateCards(getChoice(), data);
-
-/* -------------------------------------------------------------------------- */
-/*                  add click listeners to the radio buttons                  */
-/* -------------------------------------------------------------------------- */
 document
   .getElementsByName("period")
-  .forEach((el) => el.addEventListener("click", handleRadioClick));
+  .forEach((el) =>
+    el.addEventListener("click", () => populateCards(getChoice(), data))
+  );
 
 /* -------------------------------------------------------------------------- */
 /*                          fill in the initial state                         */

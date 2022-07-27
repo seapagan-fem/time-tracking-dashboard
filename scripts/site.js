@@ -35,12 +35,11 @@ const periodPrefix = (value) => {
 };
 
 const populateSingleCard = (cardType, data) => {
-  Array.from(document.getElementsByName(cardType)).forEach((el) => {
-    el.querySelector(".metric-time").innerText = postfix(data.current);
-    el.querySelector(".metric-previous").innerText = periodPrefix(
-      postfix(data.previous)
-    );
-  });
+  const thisEl = document.getElementById(cardType.replaceAll(" ", "-"));
+  thisEl.querySelector(".metric-time").innerText = postfix(data.current);
+  thisEl.querySelector(".metric-previous").innerText = periodPrefix(
+    postfix(data.previous)
+  );
 };
 
 const populateCards = (choice, metricData) => {
